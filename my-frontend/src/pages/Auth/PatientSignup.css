@@ -1,0 +1,191 @@
+/* src/pages/auth/PatientSignup.css */
+
+/* ---------- Base ---------- */
+.ps-shell {
+    display: flex;
+    justify-content: center;
+    padding: 48px 16px 72px;
+    background: #f7f8fb;
+  }
+  
+  .ps-card {
+    width: 100%;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.08);
+    overflow: hidden;
+    display: grid;
+  }
+  
+  /* Minimal proportions */
+  .ps-card--minimal {
+    max-width: 820px;                       /* tighter overall */
+    grid-template-columns: 320px 1fr;       /* smaller info, roomy form */
+  }
+  
+  /* ---------- Info column (left) ---------- */
+  .ps-info {
+    padding: 22px;
+    background: linear-gradient(180deg, #f6f7ff 0%, #ffffff 70%);
+    border-right: 1px solid #eef1f5;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ps-info-badge {
+    align-self: flex-start;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: .02em;
+    color: #4338ca;
+    background: #eef2ff;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .ps-info-media {
+    height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+  }
+  .ps-info-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .ps-info-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 2px 0 0;
+  }
+  .ps-info-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+  
+  /* ---------- Form column (right) ---------- */
+  .ps-left {
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+  .ps-formcol .ps-left-inner {
+    width: 100%;
+    padding: 26px 26px 24px;                /* compact padding */
+  }
+  .ps-title {
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    color: #0f172a;
+  }
+  .ps-form {
+    display: grid;
+    gap: 12px;
+  }
+  
+  /* Labels emphasized */
+  .ps-left .input-label,
+  .ps-left label,
+  .ps-label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #0f172a;
+    margin-bottom: 6px;
+  }
+  
+  /* Inputs */
+  .ps-left input:not([type="checkbox"]),
+  .ps-left select,
+  .ps-left textarea,
+  .ps-input {
+    width: 100%;
+    height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .ps-left input:focus,
+  .ps-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+  
+  /* Password + toggle */
+  .ps-pass-row { position: relative; }
+  .ps-pass-row input,
+  .ps-pass-row .ps-input { padding-right: 72px; }
+  .ps-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: none;
+    color: #4f46e5;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+  }
+  
+  /* Strength bar */
+  .ps-strength {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: -2px;
+  }
+  .ps-strength .dot {
+    width: 28px; height: 4px;
+    border-radius: 999px;
+    background: #e5e7eb;
+  }
+  .ps-strength .dot.on { background: #6366f1; }
+  .ps-strength-text { margin-left: 4px; }
+  
+  /* CTA with subtle gradient to match the hub vibe */
+  .ps-cta {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #7c8cf8 0%, #5aa8ff 100%);
+    border: none;
+  }
+  .ps-cta[disabled] {
+    opacity: .7;
+  }
+  
+  /* Meta */
+  .ps-alt {
+    margin-top: 8px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+  }
+  .ps-alt a { color: #4f46e5; font-weight: 600; }
+  
+  /* Errors & helpers */
+  .input-error { color: #dc2626; font-size: 12px; }
+  .muted { color: #6b7280; font-size: 12px; }
+  
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .ps-card--minimal {
+      grid-template-columns: 1fr;
+      max-width: 560px;
+    }
+    .ps-info { border-right: 0; border-bottom: 1px solid #eef1f5; }
+  }
+  

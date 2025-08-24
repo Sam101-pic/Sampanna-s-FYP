@@ -1,0 +1,148 @@
+.lp-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 42px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 20px 0 rgba(124, 58, 237, 0.07);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(22px) brightness(1.25) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) brightness(1.25) saturate(150%);
+  border-bottom: 1px solid rgba(150, 120, 240, 0.07);
+  transition: background 0.23s, box-shadow 0.18s;
+}
+.lp-navbar:focus-within,
+.lp-navbar:hover {
+  background: rgba(255,255,255,0.17);
+}
+.lp-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.lp-logo-bg {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  border-radius: 100%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.lp-logo {
+  color: #fff;
+  font-size: 1.7rem;
+}
+.lp-title {
+  font-size: 1.36rem;
+  font-weight: 700;
+  color: #23234d;
+  letter-spacing: 0.5px;
+}
+.lp-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #7c3aed;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.lp-nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  transition: right 0.23s;
+}
+.lp-login,
+.lp-getstarted,
+.lp-logout {
+  background: none;
+  border: none;
+  color: #23234d;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 7px;
+  padding: 7px 20px;
+  cursor: pointer;
+  transition: color 0.17s, background 0.16s;
+  text-decoration: none;
+}
+.lp-getstarted {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 7px 23px;
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(130,130,200,0.09);
+}
+.lp-login.active,
+.lp-getstarted.active {
+  outline: 2.5px solid #7c3aed;
+  outline-offset: 2px;
+}
+.lp-login:hover,
+.lp-login:focus {
+  color: #7c3aed;
+  background: #ede9fecc;
+}
+.lp-getstarted:hover,
+.lp-getstarted:focus {
+  transform: scale(1.05);
+  box-shadow: 0 5px 16px rgba(130,130,200,0.14);
+}
+.lp-logout {
+  background: #fff3;
+  color: #a78bfa;
+  padding: 7px 18px;
+  border-radius: 7px;
+  margin-left: 10px;
+  border: 1px solid #e0e7ff;
+  transition: background 0.16s, color 0.16s;
+}
+.lp-logout:hover,
+.lp-logout:focus {
+  color: #fff;
+  background: #7c3aed;
+}
+.lp-username {
+  font-weight: 600;
+  color: #7c3aed;
+  margin-right: 6px;
+}
+
+/* Mobile nav */
+@media (max-width: 850px) {
+  .lp-menu-toggle {
+    display: block;
+  }
+  .lp-nav-right {
+    position: absolute;
+    top: 70px;
+    right: -120vw;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 2px 20px 0 rgba(124, 58, 237, 0.10);
+    padding: 22px 24px 28px 24px;
+    border-radius: 13px 0 13px 20px;
+    min-width: 195px;
+    transition: right 0.23s;
+    z-index: 101;
+  }
+  .lp-nav-right.open {
+    right: 15px;
+  }
+}
+
+/* For demo: force sticky nav on mobile */
+@media (max-width: 600px) {
+  .lp-navbar {
+    padding: 12px 2vw;
+  }
+  .lp-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,68 @@
+/* Base font and browser reset */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Subtle telemedicine background (radial + linear gradients) */
+  background-image:
+    radial-gradient(ellipse 55% 40% at 90% 20%, #a78bfa22 20%, transparent 80%),
+    radial-gradient(ellipse 30% 30% at 15% 80%, #60a5fa1b 10%, transparent 70%),
+    linear-gradient(180deg, #f8fafc 0%, #f4f7fd 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Code blocks */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background: #f2f4fa;
+  border-radius: 6px;
+  padding: 2px 5px;
+  color: #7c3aed;
+}
+
+/* Headings and main text color for modern look */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #23234d;
+  margin-top: 0;
+}
+
+/* Links - branded and hover effect */
+a {
+  color: #7c3aed;
+  text-decoration: none;
+  transition: color 0.14s;
+}
+a:hover, a:focus {
+  color: #d4d4d4;
+  text-decoration: underline;
+}
+
+/* Utility: Main content overlay for stacking above bg */
+#root, .app-content, .auth-form, .dashboard, .main-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Utility: Selection color */
+::selection {
+  background: #a78bfa33;
+}
+
+/* Optional: Scrollbar style */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f4f7fd;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e7ff;
+  border-radius: 8px;
+}

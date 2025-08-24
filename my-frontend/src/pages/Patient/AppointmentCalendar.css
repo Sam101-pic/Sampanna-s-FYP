@@ -1,0 +1,98 @@
+:root{
+    --bg:#f6f7fb;
+    --surface:#fff;
+    --border:#e6e9f3;
+    --ink:#22254b;
+    --muted:#7a819a;
+    --brand:#665eff;
+    --brand-soft:#f3f2ff;
+    --radius:14px;
+    --shadow:0 2px 12px rgba(18,28,45,.06);
+  }
+  
+  .ac-root{display:flex;height:100dvh;background:var(--bg);overflow:hidden;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;}
+  .ac-main{flex:1;min-width:0;height:100%;overflow:auto;padding:22px;}
+  
+  .ac-header h1{margin:0 0 6px;font-size:28px;font-weight:900;color:var(--ink);}
+  .ac-header p{margin:0 0 16px;color:var(--muted);}
+  
+  .ac-tabs{display:flex;gap:16px;justify-content:center;margin-bottom:12px;}
+  .ac-tab{
+    appearance:none;background:transparent;border:0;cursor:pointer;
+    font-weight:800;color:#6a6f86;padding:8px 10px;border-bottom:2px solid transparent;
+  }
+  .ac-tab.is-active{color:var(--ink);border-color:#cfd3e6;}
+  
+  .ac-panel{
+    background:var(--surface);border:1.4px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:14px;
+  }
+  .ac-panel-title h3{margin:0;color:var(--ink);font-size:18px;font-weight:900;}
+  .ac-panel-title p{margin:4px 0 8px;color:var(--muted);font-size:12px;}
+  
+  .ac-list{display:flex;flex-direction:column;gap:12px;}
+  .ac-appt{
+    display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
+    border:1.3px solid #dfe3f1;border-radius:12px;background:#fff;padding:10px 12px;
+  }
+  .ac-avatar{width:44px;height:44px;border-radius:12px;background:#eceaff;border:1px solid #e5e6ff;}
+  .ac-info{min-width:0;}
+  .ac-therapist{font-weight:900;color:#2b2d4f;}
+  .ac-meta{display:flex;flex-wrap:wrap;gap:12px;color:#6d7492;font-size:13px;margin-top:2px;}
+  .ac-meta span{display:inline-flex;align-items:center;gap:6px;}
+  .ac-badges{display:flex;gap:8px;margin-top:6px;}
+  .ac-pill{
+    background:#f5f6fb;border:1px solid var(--border);border-radius:999px;
+    color:#3b3f57;font-weight:800;font-size:12px;padding:4px 10px;display:inline-flex;align-items:center;gap:6px;
+  }
+  .ac-pill--ok{background:var(--brand-soft);border-color:#e5e6ff;color:#4a44cf;}
+  
+  .ac-actions{display:flex;align-items:center;gap:8px;}
+  .ac-join{
+    background:var(--brand);color:#fff;border:1px solid var(--brand);
+    border-radius:10px;padding:8px 12px;font-size:13px;font-weight:800;text-decoration:none;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .ac-join--muted{background:#f5f6fb;color:#3b3f57;border-color:var(--border);}
+  .ac-iconbtn{
+    width:36px;height:36px;border-radius:10px;background:#fff;border:1px solid var(--border);
+    display:grid;place-items:center;color:#2b2d4f;cursor:pointer;
+  }
+  
+  /* Book new */
+  .ac-book h3{margin:0 0 6px;color:var(--ink);font-size:18px;font-weight:900;}
+  .ac-help{margin:0 0 10px;color:var(--muted);font-size:13px;}
+  .ac-book-grid{display:flex;gap:10px;flex-wrap:wrap;}
+  .ac-cta{
+    background:var(--brand);color:#fff;border:1px solid var(--brand);text-decoration:none;
+    border-radius:10px;padding:10px 14px;font-weight:800;
+  }
+  .ac-cta--outline{background:#fff;color:#3b3f57;border-color:var(--border);}
+
+  /* AppointmentCalendar.css */
+.ac-actions { display:flex; gap:10px; margin-left:auto; align-items:center; }
+.ac-iconbtn, .ac-join {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:8px; text-decoration:none;
+  border:1px solid #e6e9f3; background:#fff; color:#2b2d4f; font-weight:600;
+}
+.ac-iconbtn:hover, .ac-join:hover { box-shadow:0 2px 10px rgba(18,28,45,.08); }
+
+/* make button styles consistent whether <a> or <button> */
+.ac-actions { display:flex; gap:10px; margin-left:auto; align-items:center; }
+.ac-join, .ac-join.ac-join--muted, .ac-iconbtn {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 10px; border-radius:8px; text-decoration:none; font-weight:600;
+  border:1px solid #e6e9f3; background:#fff; color:#2b2d4f; cursor:pointer;
+}
+.ac-join:hover, .ac-iconbtn:hover { box-shadow:0 2px 10px rgba(18,28,45,.08); }
+.ac-appt.is-disabled { opacity: .6; pointer-events: none; }
+.ac-join[disabled], .ac-iconbtn[disabled] { opacity:.6; cursor:not-allowed; }
+
+  /* Responsive */
+  @media (max-width:800px){
+    .ac-main{padding:16px 12px;}
+    .ac-appt{grid-template-columns:1fr;align-items:flex-start;}
+    .ac-actions{justify-content:flex-start;}
+  }
+  

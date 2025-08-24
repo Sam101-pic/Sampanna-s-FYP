@@ -1,0 +1,80 @@
+/* ratings-list styles */
+.ratings-list {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 28px rgba(130, 150, 250, 0.11);
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 36px 28px;
+  }
+  
+  .ratings-title {
+    font-size: 1.25rem;
+    color: #23234d;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  
+  .ratings-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .rating-card {
+    padding: 16px 14px;
+    background: #f8fafc;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px #7c3aed11;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: box-shadow 0.16s;
+  }
+  
+  .rating-card:hover {
+    box-shadow: 0 6px 22px #a78bfa18;
+  }
+  
+  .rating-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.07rem;
+    font-weight: 600;
+    color: #353565;
+  }
+  
+  .user-initial {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    font-size: 1.1rem;
+  }
+  
+  .rating-stars {
+    color: #fbbf24;
+    font-size: 1.09rem;
+  }
+  
+  .rating-text {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-left: 3px;
+  }
+  
+  .no-ratings {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.04rem;
+    padding: 22px 0;
+  }
+  

@@ -1,0 +1,243 @@
+.sw-authrole-bg {
+  background: linear-gradient(110deg, #f4f7fa 0%, #eef1f8 100%);
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 0 24px;
+}
+
+.sw-authrole-card {
+  display: flex;
+  width: 830px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 38px 0 rgba(70, 90, 180, 0.10);
+  overflow: hidden;
+  min-height: 430px;
+  margin-top: 40px;
+}
+
+.sw-authrole-side {
+  background: #f5f6fc;
+  width: 40%;
+  min-width: 240px;
+  padding: 32px 22px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sw-authrole-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 1.22rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.sw-authrole-logo-bg {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  border-radius: 100%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.sw-authrole-logo {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.sw-authrole-logo-text {
+  font-weight: 700;
+  font-size: 1.13rem;
+  color: #23234d;
+  letter-spacing: 0.5px;
+}
+
+.sw-authrole-side-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.sw-authrole-side-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.sw-authrole-tagline {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: #554e7c;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.sw-authrole-tagline span {
+  color: #7c3aed;
+  font-weight: 800;
+}
+
+.sw-authrole-tagline-sm {
+  font-weight: 400;
+  color: #9b9bb5;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.sw-authrole-action-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.sw-authrole-inner {
+  width: 100%;
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sw-authrole-inner h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.sw-authrole-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 28px;
+  align-items: stretch;
+}
+
+.sw-authrole-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 13px;
+  padding: 14px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(130, 130, 200, 0.08);
+  transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+}
+
+.sw-authrole-btn:hover,
+.sw-authrole-btn:focus {
+  background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sw-authrole-btn-icon {
+  font-size: 1.26em;
+}
+
+.sw-authrole-alt {
+  margin-top: 20px;
+  font-size: 1.01rem;
+  color: #8588a9;
+  text-align: center;
+}
+
+.sw-authrole-link {
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 2px;
+  transition: color 0.16s;
+}
+
+.sw-authrole-link:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 950px) {
+  .sw-authrole-card {
+    flex-direction: column;
+    width: 99vw;
+    min-width: unset;
+    min-height: 0;
+    box-shadow: 0 8px 32px 0 rgba(70, 90, 180, 0.09);
+    margin-top: 0;
+  }
+
+  .sw-authrole-side {
+    width: 100%;
+    min-width: unset;
+    align-items: center;
+    padding: 22px 8vw 10px 8vw;
+  }
+
+  .sw-authrole-action-side {
+    width: 100%;
+    align-items: flex-start;
+    padding: 24px 6vw 32px 6vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .sw-authrole-bg {
+    padding: 6vw 0;
+    min-height: 0;
+  }
+
+  .sw-authrole-card {
+    width: 100vw;
+    border-radius: 0;
+    box-shadow: 0 0px 16px 0 rgba(70, 90, 180, 0.08);
+  }
+
+  .sw-authrole-side,
+  .sw-authrole-action-side {
+    padding: 14px 4vw 10px 4vw;
+  }
+
+  .sw-authrole-side-img {
+    height: 100px;
+  }
+
+  .sw-authrole-inner h2 {
+    font-size: 1.5rem;
+  }
+
+  .sw-authrole-tagline {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .sw-authrole-tagline-sm {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

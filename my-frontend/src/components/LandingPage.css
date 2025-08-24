@@ -1,0 +1,118 @@
+/* --- Font (Inter is a great public match for the reference) --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap");
+
+:root{
+  /* New palette inspired by the screenshot */
+  --mint-100:#e6f1ef;      /* base page/hero */
+  --mint-200:#edf6f4;      /* lighter stop */
+  --mint-300:#f4fbf9;      /* lightest stop */
+  --teal-ink:#103b3a;      /* headline */
+  --teal-ink-2:#2a4b4a;    /* paragraph */
+  --brand:#7c3aed;
+  --grad-a:#60a5fa; --grad-b:#a78bfa;
+}
+
+/* base */
+.lp-root{
+  min-height:100vh;
+  display:flex; flex-direction:column;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background:#f8fafc;
+}
+
+/* NAV, buttons, cards etc. – unchanged from your file */
+.lp-navbar{display:flex;align-items:center;justify-content:space-between;padding:24px 48px;background:#fff;box-shadow:0 1px 8px rgba(50,50,80,.07)}
+.lp-logo-group{display:flex;align-items:center;gap:12px}
+.lp-logo-bg{background:linear-gradient(90deg,#a78bfa 0%,#60a5fa 100%);border-radius:100%;padding:8px}
+.lp-logo{color:#fff;font-size:28px}
+.lp-title{font-size:1.5rem;font-weight:700;color:#23272f}
+.lp-nav-right{display:flex;gap:18px}
+.lp-login{background:none;border:none;font-size:1rem;color:#5b5f7c;font-weight:600;cursor:pointer;transition:color .2s}
+.lp-login:hover{color:#7c3aed}
+.lp-getstarted{background:linear-gradient(90deg,#a78bfa 0%,#60a5fa 100%);color:#fff;border:none;padding:10px 30px;border-radius:12px;font-weight:600;font-size:1rem;box-shadow:0 2px 8px rgba(100,100,160,.08);cursor:pointer;transition:transform .18s}
+.lp-getstarted:hover{transform:scale(1.07)}
+
+/* ---------------- Hero: new light-mint background + teal text ---------------- */
+.lp-hero{
+  display:flex; flex-direction:column; align-items:center;
+  padding:44px 12px 24px;
+  /* soft mint background like the reference */
+  background:
+    radial-gradient(120% 70% at 50% -30%, rgba(255,255,255,.6) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, var(--mint-100) 0%, var(--mint-200) 60%, var(--mint-300) 100%);
+}
+
+.lp-badge{
+  padding:5px 18px;background:#fffbe9;color:#eab308;border-radius:999px;font-size:1rem;margin-bottom:16px;font-weight:500;
+  box-shadow:0 2px 10px rgba(200,170,50,.07)
+}
+.lp-headline{
+  font-size:2.9rem; font-weight:900; letter-spacing:-.02em;
+  color:var(--teal-ink); margin-bottom:8px; text-align:center;
+}
+.lp-gradient-text{
+  background:linear-gradient(90deg,#0f4645 0%, #0f4645 100%); /* keep solid teal inside the span */
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.lp-subtext{
+  max-width:700px; text-align:center; color:var(--teal-ink-2);
+  font-size:1.2rem; margin-bottom:18px;
+}
+.lp-hero-buttons{display:flex;gap:16px;margin-bottom:36px}
+.lp-main-btn{
+  background:#7c3aed;color:#fff;font-size:1rem;padding:12px 30px;border:none;border-radius:11px;font-weight:700;
+  box-shadow:0 1px 10px rgba(124,58,237,.11);cursor:pointer;transition:background .18s, transform .18s;text-decoration:none
+}
+.lp-main-btn:hover{background:#6d28d9;transform:scale(1.04)}
+.lp-secondary-btn{
+  border:1.5px solid #9fb5b3;color:#274b4a;background:#fff;font-size:1rem;padding:12px 30px;border-radius:11px;font-weight:700;transition:border .16s,color .18s;text-decoration:none
+}
+.lp-secondary-btn:hover{border-color:#74a19e;color:#0f4645}
+
+/* section title + features (unchanged structure) */
+.lp-section-title{font-size:1.4rem;font-weight:800;text-align:center;color:#202044;margin-bottom:18px}
+.lp-feature-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:20px}
+@media (min-width:900px){.lp-feature-grid{grid-template-columns:repeat(3,1fr);gap:28px}}
+.tilt-card{background:#fff;border-radius:22px;box-shadow:0 2px 14px rgba(55,80,180,.07);padding:32px 18px;min-height:220px;transition:box-shadow .16s, transform .18s;will-change:transform;cursor:pointer}
+.tilt-card:hover{box-shadow:0 8px 32px rgba(31,38,135,.12)}
+.lp-feature-card{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.feature-icon{font-size:2.1rem;margin-bottom:6px}
+.feature-icon.blue{color:#60a5fa}.feature-icon.green{color:#22c55e}.feature-icon.purple{color:#a78bfa}
+.lp-feature-title{font-size:1.15rem;font-weight:600;color:#23234d}
+.lp-feature-desc{color:#6b7280;font-size:1rem}
+
+/* Privacy & Stats (unchanged) */
+.lp-privacy{display:flex;flex-direction:column;align-items:center;gap:40px;background:#fff;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:56px 0 42px}
+@media (min-width:900px){.lp-privacy{flex-direction:row;justify-content:center;gap:110px}}
+.lp-privacy-list{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.lp-privacy-item{display:flex;flex-direction:column;gap:2px;font-size:1.06rem;font-weight:600;color:#303040}
+.lp-privacy-icon{font-size:1.2rem;margin-bottom:4px}.lp-privacy-icon.green{color:#22c55e}
+.lp-privacy-desc{font-weight:400;color:#6b7280;font-size:.98rem;margin-bottom:2px}
+.lp-rating-card{background:#fffbe9;padding:38px 48px;border-radius:20px;box-shadow:0 2px 18px rgba(235,200,48,.09);display:flex;flex-direction:column;align-items:center}
+.lp-rating-star{font-size:2.4rem;color:#fbbf24;margin-bottom:8px}
+.lp-rating-score{font-size:2rem;font-weight:700;color:#202024}
+.lp-rating-subtext{color:#6b7280;font-size:1rem;margin-bottom:2px}
+.lp-rating-stars{display:flex;gap:3px;margin:5px 0 1px}
+.lp-rating-star-sm{color:#fbbf24;font-size:1.3rem}
+.lp-rating-mini{font-size:.87rem;color:#6b7280;margin-top:7px}
+
+/* CTA (unchanged) */
+.lp-cta{background:linear-gradient(90deg,var(--grad-a) 0%, var(--grad-b) 100%);color:#fff;text-align:center;padding:72px 10px;display:flex;flex-direction:column;align-items:center}
+.lp-cta-title{font-size:2rem;font-weight:700;margin-bottom:9px}
+.lp-cta-text{font-size:1.18rem;margin-bottom:18px}
+.lp-cta-btn{background:#fff;color:#7c3aed;font-weight:700;padding:13px 48px;border:none;border-radius:13px;font-size:1.05rem;box-shadow:0 2px 8px rgba(40,40,140,.11);cursor:pointer;transition:background .17s,color .17s;text-decoration:none}
+.lp-cta-btn:hover{background:#f1f5f9;color:#4f46e5}
+
+/* Footer (unchanged) */
+.lp-footer{background:#fff;border-top:1.2px solid #eee;padding:44px 12px 40px;display:flex;flex-direction:column;align-items:center;gap:24px}
+@media (min-width:900px){.lp-footer{flex-direction:row;justify-content:space-between;padding:44px 54px 40px}}
+.lp-footer-logo-group{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.lp-footer-heart{color:#a78bfa;font-size:1.5rem}
+.lp-footer-title{font-weight:700;font-size:1.15rem;color:#23234d}
+.lp-footer-columns{display:flex;gap:48px;font-size:1rem;color:#5b5f7c}
+.lp-footer-heading{font-weight:600;font-size:1.09rem;margin-bottom:5px}
+
+/* Responsive tweaks */
+@media (max-width:700px){
+  .lp-headline{font-size:2.2rem}
+}

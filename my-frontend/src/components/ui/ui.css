@@ -1,0 +1,74 @@
+.input-wrap {
+    margin-bottom: 18px;
+  }
+  .input-wrap label {
+    font-weight: 500;
+    color: #373a47;
+    display: block;
+  }
+  .input-wrap input {
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 1rem;
+    margin-top: 4px;
+    background: #f7f7fa;
+    transition: border 0.16s, box-shadow 0.16s;
+  }
+  .input-wrap input:focus {
+    outline: none;
+    border: 1.5px solid #a78bfa;
+    box-shadow: 0 0 0 2px #f3e8ff;
+  }
+  .input-error {
+    color: #b91c1c;
+    font-size: 0.96rem;
+    margin-top: 2px;
+  }
+  .btn {
+    background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.08rem;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(130,130,200,0.07);
+    transition: box-shadow 0.13s, opacity 0.16s, background 0.14s;
+  }
+  .btn:disabled {
+    opacity: 0.64;
+    cursor: not-allowed;
+  }
+  .btn:hover:enabled {
+    box-shadow: 0 6px 18px rgba(130,130,200,0.13);
+    opacity: 0.95;
+  }
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2.5px solid #fff;
+    border-bottom-color: #a78bfa;
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    vertical-align: middle;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  .message-box {
+    margin: 7px 0 10px 0;
+    padding: 10px 0;
+    border-radius: 7px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .message-box.error { background: #fff1f2; color: #b91c1c; border: 1px solid #fee2e2; }
+  .message-box.success { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+  

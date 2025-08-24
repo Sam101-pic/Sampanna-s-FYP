@@ -1,0 +1,48 @@
+:root{
+    --bg:#f3f4f6; --card:#fff; --ring:#e5e7eb; --ink:#0b1020;
+    --brand:#6a5cff; --muted:#6b7280; --border:#ecebfc;
+  }
+  
+  /* layout */
+  .bk-shell{ min-height:100vh; background:var(--bg); display:grid; place-items:start center; }
+  .bk-main{ width:100%; max-width:760px; padding:28px 18px 60px; }
+  
+  /* header */
+  .bk-header{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+  .bk-title{ display:flex; align-items:center; gap:12px; }
+  .bk-title-icon{ color:var(--brand); font-size:1.6rem; }
+  .bk-header h1{ margin:0; font-size:1.6rem; letter-spacing:-.2px; }
+  .bk-header p{ margin:2px 0 0; color:var(--muted); font-size:.98rem; }
+  .bk-link{ color:#4f46e5; text-decoration:none; font-weight:600; }
+  
+  /* card */
+  .bk-card{ background:var(--card); border:1.5px solid #e9e2ff; border-radius:16px; padding:16px; box-shadow:0 6px 18px rgba(0,0,0,.04); }
+  .bk-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+  .bk-field{ display:flex; flex-direction:column; gap:6px; }
+  .bk-field.full{ grid-column:1 / -1; }
+  .bk-label{ font-weight:700; color:#1f2437; display:flex; align-items:center; gap:8px; }
+  .bk-ico{ color:#6a5cff; }
+  .bk-input{ border:1px solid var(--ring); background:#fff; border-radius:12px; padding:10px 12px; outline:none; }
+  .bk-textarea{ border:1px solid var(--ring); background:#fff; border-radius:12px; padding:10px 12px; resize:vertical; outline:none; }
+  
+  /* summary row */
+  .bk-row{ grid-column:1 / -1; display:flex; gap:10px; flex-wrap:wrap; }
+  .bk-kv{ flex:1 1 220px; display:flex; align-items:center; justify-content:space-between; border:1px dashed #ecebfc; background:#fafbff; border-radius:12px; padding:10px 12px; }
+  .bk-k{ color:var(--muted); }
+  .bk-v{ font-weight:700; }
+  
+  /* buttons */
+  .bk-btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; border:1px solid var(--ring); background:#fff; color:#1f2437; border-radius:12px; padding:10px 12px; cursor:pointer; font-weight:700; }
+  .bk-btn.primary{ background:var(--brand); border-color:var(--brand); color:#fff; box-shadow:0 8px 20px #6a5cff2a; }
+  .bk-btn.primary:disabled{ opacity:.7; cursor:not-allowed; }
+  .bk-btn.full{ width:100%; }
+  
+  /* fineprint */
+  .bk-fineprint{ color:var(--muted); font-size:.9rem; margin-top:10px; text-align:center; }
+  
+  /* responsive */
+  @media (max-width: 700px){
+    .bk-grid{ grid-template-columns:1fr; }
+    .bk-header{ align-items:flex-start; flex-direction:column; }
+  }
+  

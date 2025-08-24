@@ -1,0 +1,123 @@
+.pay-root { display:flex; min-height:100vh; background:#f7f8fa; }
+.pay-main { flex:1; padding:2rem; }
+
+/* Header */
+.pay-header h1 { margin:0 0 .3rem; }
+.pay-header p { margin:0 0 1rem; color:#5f6b7a; }
+
+/* Tabs */
+.pay-tabs { display:flex; gap:.6rem; margin:.6rem 0 1.2rem; }
+.pay-tab {
+  background:#fff; border:1px solid #e7eaf3; padding:.55rem .9rem;
+  border-radius:10px; cursor:pointer; font-weight:600; color:#334155;
+}
+.pay-tab.is-active { border-color:#cfd5ff; box-shadow:0 1px 8px #dfe4ff80; }
+
+/* Generic panels */
+.pay-panel {
+  background:#fff; border:1.5px solid #e7eaf3; border-radius:12px;
+  padding:1rem; box-shadow:0 2px 10px #e6e9f511;
+}
+
+/* Current subscription */
+.sub-current { margin-bottom:1rem; }
+.sub-current-head { display:flex; align-items:center; gap:.5rem; font-weight:700; margin:.2rem 0 .6rem; }
+.sub-current-head .dot { width:8px; height:8px; background:#111827; border-radius:50%; display:inline-block; }
+.sub-current-card {
+  border:1px solid #e6e9f3; border-radius:10px; padding:1rem; background:#f8faff;
+}
+.sub-cur-name { font-weight:700; }
+.sub-cur-details { color:#5f6b7a; margin:.3rem 0; }
+.sub-cur-next { color:#5f6b7a; }
+.sub-cur-actions { display:flex; gap:.6rem; align-items:center; margin-top:.6rem; justify-content:space-between; }
+.badge-active { background:#ecfdf5; color:#047857; font-weight:700; padding:.25rem .55rem; border-radius:999px; }
+.sub-cur-buttons { display:flex; gap:.5rem; }
+
+/* Plan cards grid */
+.plans-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+.plan-card {
+  border:1.5px solid #e7eaf3; border-radius:12px; background:#fff;
+  padding:1rem; position:relative;
+}
+.plan-badge {
+  position:absolute; top:-10px; left:50%; transform:translateX(-50%);
+  background:#eef2ff; color:#4338ca; border:1px solid #c7ccff; padding:.15rem .5rem;
+  font-size:.85rem; border-radius:999px; font-weight:700;
+}
+.plan-name { margin:.3rem 0; }
+.plan-price .big { font-size:2rem; font-weight:800; }
+.plan-price .unit { margin-left:.2rem; color:#6b7280; }
+.plan-features { list-style:none; margin:.8rem 0 1rem; padding:0; display:grid; gap:.35rem; color:#364152; }
+.plan-features .ok { color:#16a34a; margin-right:.35rem; }
+.plan-current-flag { text-align:center; color:#475569; font-weight:700; }
+.plan-card.is-popular { border-color:#cfd5ff; box-shadow:0 4px 18px #e1e6ff90; }
+.plan-card.is-current { outline:2px solid #cfd5ff; }
+
+/* Buttons */
+.btn-outline {
+  background:#fff; border:1px solid #cfd5ff; color:#334155; font-weight:700;
+  border-radius:10px; padding:.55rem 1rem; cursor:pointer; display:inline-flex; gap:.4rem; align-items:center;
+}
+.btn-outline.wide { width:100%; justify-content:center; }
+.btn-primary {
+  background:#6a5cff; color:#fff; border:none; border-radius:10px; padding:.6rem 1rem;
+  font-weight:700; cursor:pointer; display:inline-flex; gap:.4rem; align-items:center;
+}
+
+/* Pay Per Session split */
+.pay-split { display:grid; grid-template-columns: 1.1fr 1fr; gap:1rem; }
+.panel-title { font-weight:800; margin:0 0 .3rem; }
+.muted { color:#6b7280; margin-bottom:.7rem; }
+
+/* Removed empty ruleset */
+.pps-card {
+  border:1px solid #e7eaf3; border-radius:10px; background:#fcfcfe; padding:1rem; margin-bottom:1rem;
+}
+.pps-row { display:flex; justify-content:space-between; padding:.35rem 0; }
+.pps-divider { height:1px; background:#eceff7; margin:.3rem 0; }
+.pps-row.total span:last-child { font-weight:800; }
+
+.pps-form { display:grid; gap:.7rem; }
+.pps-label { font-weight:600; }
+.pps-select { position:relative; }
+.pps-select select {
+  width:100%; appearance:none; border:1px solid #e6e9f3; border-radius:10px;
+  padding:.6rem .9rem; background:#fff; color:#111827;
+}
+.sel-caret { position:absolute; right:.7rem; top:50%; transform:translateY(-50%); color:#6b7280; }
+.pay-action { margin-top:.3rem; }
+
+/* Right benefits */
+.pps-right { border:1px solid #e7eaf3; border-radius:12px; background:#fff; padding:1rem; }
+.benefit { display:flex; gap:.7rem; align-items:flex-start; padding:.5rem 0; }
+.benefit .ok { color:#16a34a; margin-top:.2rem; }
+.b-title { font-weight:700; }
+.b-sub { color:#6b7280; }
+
+/* History */
+.hist-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:.6rem; }
+.hist-list { display:grid; gap:.7rem; }
+.hist-item {
+  border:1px solid #e6e9f3; border-radius:12px; background:#fff; padding:.8rem 1rem;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.hist-left { display:flex; gap:.8rem; align-items:center; }
+.status-icon {
+  width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  border:1px solid #e6e9f3;
+}
+.status-icon.completed { background:#ecfdf5; color:#047857; border-color:#b7f3df; }
+.status-icon.pending { background:#fff7ed; color:#b45309; border-color:#fde6c8; }
+.hist-title { font-weight:700; }
+.hist-sub { color:#6b7280; display:flex; gap:.45rem; align-items:center; }
+.hist-right { text-align:right; }
+.hist-amt { font-weight:800; }
+.hist-status.ok { color:#047857; font-weight:700; }
+.hist-status.pending { color:#b45309; font-weight:700; }
+.hist-skel { color:#6b7280; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .plans-grid { grid-template-columns: 1fr; }
+  .pay-split { grid-template-columns: 1fr; }
+}
